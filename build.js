@@ -1,5 +1,5 @@
-import path from "path"
-import fs from "fs"
+const path = require("path")
+const fs = require("fs")
 
 const overwriteCdkJsonInDist = () => {
     const cdkJsonPathInSrc = path.resolve(__dirname, "./src/cdk.json")

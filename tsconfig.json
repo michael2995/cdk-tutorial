@@ -17,13 +17,12 @@
     "inlineSources": true,
     "experimentalDecorators": true,
     "strictPropertyInitialization":false,
-    "esModuleInterop": true,
     "typeRoots": ["./node_modules/@types"],
     "rootDir": "src",
     "outDir": "dist"
   },
   "exclude": [
     "cdk.out",
-    "./build.ts"
+    "build.js"
   ]
 }

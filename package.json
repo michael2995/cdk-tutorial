@@ -5,13 +5,16 @@
     "cdk-tutorial": "bin/cdk-tutorial.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && tsc && ts-node build.ts",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "yarn build && cd dist && cdk deploy",
+    "diff": "yarn build && cd dist && cdk diff"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.95.1",
+    "@types/aws-lambda": "^8.10.73",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
     "aws-cdk": "1.95.1",
@@ -21,6 +24,7 @@
     "typescript": "~3.9.7"
   },
   "dependencies": {
+    "@aws-cdk/aws-apigateway": "^1.95.1",
     "@aws-cdk/aws-sns": "1.95.1",
     "@aws-cdk/aws-sns-subscriptions": "1.95.1",
     "@aws-cdk/aws-sqs": "1.95.1",

@@ -10,7 +10,8 @@
     "test": "jest",
     "cdk": "cdk",
     "deploy": "yarn build && cd dist && cdk deploy",
-    "diff": "yarn build && cd dist && cdk diff"
+    "diff": "yarn build && cd dist && cdk diff",
+    "destroy": "cd dist && cdk destroy"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.95.1",
